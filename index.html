@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinav Bhargava - Product Manager</title>
+    <meta property="og:title" content="Abhinav Bhargava">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Product Manager | Strategy | Cloud Infrastructure">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1c1c1c;
+            background-color: #ffffff;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #0052a3;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        /* Header/Profile Section */
+        .header {
+            padding: 112px 0 56px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .profile {
+            display: flex;
+            gap: 48px;
+            align-items: flex-start;
+        }
+
+        .profile-image {
+            flex-shrink: 0;
+            width: 160px;
+            height: 160px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        }
+
+        .profile-info h1 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .profile-info p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            transition: all 0.3s ease;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-2px);
+            border-bottom-color: #0066cc;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 48px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 28px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #1c1c1c;
+            transition: all 0.3s ease;
+        }
+
+        h2:hover {
+            border-bottom-color: #0066cc;
+            color: #0066cc;
+        }
+
+        .entry {
+            margin-bottom: 32px;
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .entry:hover {
+            background-color: #f8f9fa;
+            transform: translateX(8px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .entry-logo {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 4px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .entry-content {
+            flex: 1;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .entry-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1c1c1c;
+            transition: color 0.2s ease;
+        }
+
+        .entry:hover .entry-title {
+            color: #0066cc;
+        }
+
+        .entry-date {
+            font-size: 13px;
+            color: #999;
+        }
+
+        .entry-company {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .entry-company a {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: #f0f5ff;
+            border: 1px solid #b3d9ff;
+            border-radius: 6px;
+            color: #0066cc;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .entry-company a:hover {
+            background-color: #e6f0ff;
+            color: #0052a3;
+            border-color: #0066cc;
+            box-shadow: 0 2px 8px rgba(0, 102, 204, 0.15);
+        }
+
+        .entry-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .entry-list {
+            font-size: 14px;
+            color: #666;
+            margin-left: 20px;
+            list-style-position: inside;
+        }
+
+        .entry-list li {
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        /* Awards and Skills */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .award-item {
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .award-item:hover {
+            background-color: #f8f9fa;
+            border-color: #0066cc;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 102, 204, 0.12);
+        }
+
+        .award-title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: #1c1c1c;
+        }
+
+        .award-subtitle {
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .header {
+                padding: 48px 0 32px 0;
+            }
+
+            .profile {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .entry {
+                flex-direction: column;
+                gap: 12px;
+                padding: 16px;
+                margin-bottom: 24px;
+            }
+
+            .entry:hover {
+                transform: none;
+            }
+
+            .entry-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            section {
+                padding: 32px 0;
+            }
+
+            h2 {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            .profile-info h1 {
+                font-size: 24px;
+            }
+
+            .award-item:hover {
+                transform: none;
+            }
+
+            .profile-image:hover {
+                transform: scale(1.02);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="profile.jpg" alt="Abhinav Bhargava">
+                </div>
+                <div class="profile-info">
+                    <h1>Abhinav Bhargava</h1>
+                    <p>
+                        Product Manager and strategist with a passion for developing innovative products from 0-1. I've built and launched breakthrough products in early-stage startups while also shaping product strategy at enterprise-scale organizations. Experienced in navigating complex stakeholder dynamics, driving adoption through data-driven decisions, and delivering measurable impact across diverse teams and cultures. Currently an MBA Candidate at Foster School of Business, University of Washington (graduating March 2026).
+                    </p>
+                    <div class="social-links">
+                        <a href="mailto:abhinav9@uw.edu">abhinav9@uw.edu</a>
+                        <span style="color: #666;">|</span>
+                        <span style="color: #666;">Seattle, WA</span>
+                        <span style="color: #666;">|</span>
+                        <a href="tel:+14134048044">(413) 404-8044</a>
+                        <span style="color: #666;">|</span>
+                        <a href="https://www.linkedin.com/in/abhinavbhargava10/" target="_blank">LinkedIn</a>
+                    </div>
+                    <p style="font-size: 13px; color: #999; margin-top: 8px;">
+                        Eligible to resume H1-B without lottery
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Experience Section -->
+        <section>
+            <h2>Experience</h2>
+            
+            <div class="entry">
+                <div class="entry-content">
+                    <div class="entry-header">
+                        <span class="entry-title">Senior Product Manager - AGI | Foundation Models</span>
+                        <span class="entry-date">2025</span>
+                    </div>
+                    <div class="entry-company"><a href="https://aws.amazon.com/" target="_blank" style="color: #666;">Amazon Web Services (AWS)</a>, Seattle, WA</div>
+                    <ul class="entry-list">
+                        <li>Defined Amazon Nova's product strategy and GTM for enterprise GenAI</li>
+                        <li>Built metadata-driven demo repository with 10× discoverability and reuse across teams</li>
+                        <li>Optimized demo strategy based on adoption trends and enterprise momentum</li>
+                    </ul>
+                    <p style="margin-top: 12px; padding: 12px; background-color: #f0f5ff; border-left: 3px solid #0066cc; border-radius: 4px;">
+                        <strong>Published:</strong> <a href="https://aws.amazon.com/blogs/machine-learning/transforming-enterprise-operations-four-high-impact-use-cases-with-amazon-nova/" target="_blank" style="font-weight: 600;">AWS ML Blog - "Transforming Enterprise Operations: Four High-Impact Use Cases with Amazon Nova"</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-content">
+                    <div class="entry-header">
+                        <span class="entry-title">Lead Product Manager, AI</span>
+                        <span class="entry-date">2023 - 2024</span>
+                    </div>
+                    <div class="entry-company"><a href="https://www.nobias.me/" target="_blank" style="color: #666;">NOBIAS</a>, New York City, NY</div>
+                    <ul class="entry-list">
+                        <li>Designed and launched flagship AI product with A/B testing and SEO optimization</li>
+                        <li>Built LLM integration playbook reducing user drop-offs from 75% to 70%</li>
+                        <li>Achieved 14% WoW user growth and 22% higher retention via user research</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-content">
+                    <div class="entry-header">
+                        <span class="entry-title">Founding Member - UX Lead | Product</span>
+                        <span class="entry-date">2018 - 2022</span>
+                    </div>
+                    <div class="entry-company"><a href="https://22bate7.com/" target="_blank" style="color: #666;">22BATE7</a> (Ed-tech startup funded by Social Alpha, DST, Lockheed Martin and Tata Trust)</div>
+                    <ul class="entry-list">
+                        <li>Managed NPI (New Product Introduction) and market research for class polling app achieving 8× learning outcomes in just 4 weeks for 150k users</li>
+                        <li>Improved Play Store rating from 4.1 to 4.6 through iterative UX refinement and data-driven product decisions</li>
+                        <li>Built QR-code-like digital data capture platform evaluating 1M+ kids for Agastya Foundation, eliminating 90% manual data entry and 99% data cleaning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-content">
+                    <div class="entry-header">
+                        <span class="entry-title">Senior Design Lead</span>
+                        <span class="entry-date">2017 - 2023</span>
+                    </div>
+                    <div class="entry-company"><a href="https://www.gglo.com/" target="_blank" style="color: #666;">GGLO</a>, Seattle, WA</div>
+                    <ul class="entry-list">
+                        <li>Led $4.5B+ in urban developments including $1.5B Northgate and Redmond Town Center projects</li>
+                        <li>Presented ROI studies to C-level executives, securing 20% cost savings and 7% revenue growth</li>
+                        <li>Drove Autodesk cloud adoption reducing workflow errors by 42% and costs by 28%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section>
+            <h2>Education</h2>
+            
+            <div class="entry">
+                <div class="entry-logo">🎓</div>
+                <div class="entry-content">
+                    <div class="entry-header">
+                        <span class="entry-title">Master of Business Administration (MBA)</span>
+                        <span class="entry-date">March 2026</span>
+                    </div>
+                    <div class="entry-company">Foster School of Business, University of Washington</div>
+                    <p class="entry-description">
+                        Dean's Merit Fellow. GRE 332. Finance leadership in Foster Consulting Society and Student Wine Club.
+                    </p>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-logo">🎓</div>
+                <div class="entry-content">
+                    <div class="entry-header">
+                        <span class="entry-title">Master of Architecture</span>
+                        <span class="entry-date">May 2017</span>
+                    </div>
+                    <div class="entry-company">University of Massachusetts, Amherst</div>
+                    <p class="entry-description">
+                        GPA: 3.8/4.0. Thesis on climate change and NYC's future. AIA Design Excellence Awardee. Graduate Senate Treasurer.
+                    </p>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-logo">🎓</div>
+                <div class="entry-content">
+                    <div class="entry-header">
+                        <span class="entry-title">Bachelor of Architecture</span>
+                        <span class="entry-date"></span>
+                    </div>
+                    <div class="entry-company">School of Planning and Architecture, India</div>
+                    <p class="entry-description">
+                        Top 1% of class. AIEEE Rank 832 (Top 1% in national entrance exam).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2>Skills</h2>
+            
+            <div class="awards-grid">
+                <div class="award-item">
+                    <div class="award-title">Product Management</div>
+                    <div class="award-subtitle">Strategy, Roadmap, Go-to-Market</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-title">AI & Data</div>
+                    <div class="award-subtitle">Prompt Engineering, Python, LLMs</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-title">Design & Visualization</div>
+                    <div class="award-subtitle">Figma, Midjourney, Power BI, Tableau</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-title">Analytics</div>
+                    <div class="award-subtitle">A/B Testing, Data Visualization, Excel</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-title">Cloud Infrastructure</div>
+                    <div class="award-subtitle">AWS, Google Cloud, System Design</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-title">Technical Leadership</div>
+                    <div class="award-subtitle">Team Management, Stakeholder Communication</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section>
+            <h2>Activities</h2>
+            
+            <div class="awards-grid">
+                <div class="award-item">
+                    <div class="award-title">Finance & Investing</div>
+                    <div class="award-subtitle">Stock research, 20x returns in 5 years</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-title">Creative Pursuits</div>
+                    <div class="award-subtitle">Drone cinematography, Custom home design</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-title">Competitive Gaming</div>
+                    <div class="award-subtitle">Chess - Elo Rating 1910</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-title">Academic Competitions</div>
+                    <div class="award-subtitle">CS50 Puzzle Day by Harvard - Top 5%</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Abhinav Bhargava. All rights reserved.</p>
+    </footer>
+</body>
+</html>
