@@ -8,7 +8,24 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="Product Manager | Strategy | Cloud Infrastructure">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --ink: #1a1e26;
+            --muted: #5b6670;
+            --muted-light: #8a97a3;
+            --accent: #0b6e6e;
+            --accent-strong: #0a5b5b;
+            --accent-warm: #d14b6a;
+            --accent-gold: #f0a23b;
+            --surface: #ffffff;
+            --surface-alt: #f4f7fb;
+            --border: #e6ecf2;
+            --shadow: rgba(10, 26, 44, 0.08);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -16,20 +33,24 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            font-family: 'Manrope', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
-            color: #1c1c1c;
-            background-color: #ffffff;
+            color: var(--ink);
+            background-color: #fdfaf6;
+            background-image:
+                radial-gradient(circle at 15% 10%, rgba(240, 162, 59, 0.18), transparent 45%),
+                radial-gradient(circle at 85% 5%, rgba(11, 110, 110, 0.2), transparent 42%),
+                linear-gradient(120deg, #fff4e6 0%, #f6f9ff 45%, #ecf9f6 100%);
         }
 
         a {
-            color: #0066cc;
+            color: var(--accent);
             text-decoration: none;
             transition: color 0.2s;
         }
 
         a:hover {
-            color: #0052a3;
+            color: var(--accent-warm);
         }
 
         .container {
@@ -41,7 +62,7 @@
         /* Header/Profile Section */
         .header {
             padding: 112px 0 56px 0;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid var(--border);
         }
 
         .profile {
@@ -55,7 +76,7 @@
             width: 160px;
             height: 160px;
             border-radius: 8px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0b6e6e 0%, #2d9cdb 55%, #f0a23b 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -73,25 +94,26 @@
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
-            border: 4px solid #0066cc;
-            box-shadow: 0 6px 18px rgba(0, 102, 204, 0.12);
+            border: 4px solid rgba(11, 110, 110, 0.7);
+            box-shadow: 0 6px 18px rgba(11, 110, 110, 0.18);
         }
 
         .profile-image:hover {
             transform: scale(1.05) rotate(2deg);
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 24px rgba(45, 156, 219, 0.35);
         }
 
         .profile-info h1 {
-            font-size: 32px;
-            font-weight: 500;
+            font-family: 'Fraunces', 'Times New Roman', serif;
+            font-size: 34px;
+            font-weight: 600;
             margin-bottom: 8px;
             line-height: 1.2;
         }
 
         .profile-info p {
             font-size: 15px;
-            color: #666;
+            color: var(--muted);
             line-height: 1.5;
             margin-bottom: 16px;
         }
@@ -111,13 +133,13 @@
 
         .social-links a:hover {
             transform: translateY(-2px);
-            border-bottom-color: #0066cc;
+            border-bottom-color: var(--accent);
         }
 
         /* Section Styles */
         section {
             padding: 48px 0;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid var(--border);
         }
 
         section:last-child {
@@ -125,17 +147,18 @@
         }
 
         h2 {
-            font-size: 20px;
+            font-family: 'Fraunces', 'Times New Roman', serif;
+            font-size: 21px;
             font-weight: 500;
             margin-bottom: 28px;
             padding-bottom: 8px;
-            border-bottom: 2px solid #1c1c1c;
+            border-bottom: 2px solid var(--accent);
             transition: all 0.3s ease;
         }
 
         h2:hover {
-            border-bottom-color: #0066cc;
-            color: #0066cc;
+            border-bottom-color: var(--accent-warm);
+            color: var(--accent-warm);
         }
 
         .entry {
@@ -147,12 +170,15 @@
             border-radius: 8px;
             transition: all 0.3s ease;
             cursor: pointer;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid transparent;
         }
 
         .entry:hover {
-            background-color: #f8f9fa;
+            background-color: #f0f8f7;
+            border-color: rgba(11, 110, 110, 0.15);
             transform: translateX(8px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px var(--shadow);
         }
 
         .entry-logo {
@@ -160,13 +186,13 @@
             width: 48px;
             height: 48px;
             border-radius: 4px;
-            background: #f0f0f0;
+            background: linear-gradient(135deg, rgba(11, 110, 110, 0.2), rgba(240, 162, 59, 0.2));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
             font-weight: 500;
-            color: #666;
+            color: var(--accent-strong);
         }
 
         .entry-content {
@@ -183,22 +209,22 @@
         .entry-title {
             font-size: 15px;
             font-weight: 600;
-            color: #1c1c1c;
+            color: var(--ink);
             transition: color 0.2s ease;
         }
 
         .entry:hover .entry-title {
-            color: #0066cc;
+            color: var(--accent);
         }
 
         .entry-date {
             font-size: 13px;
-            color: #999;
+            color: var(--muted-light);
         }
 
         .entry-company {
             font-size: 13px;
-            color: #666;
+            color: var(--muted);
             margin-bottom: 8px;
         }
 
@@ -208,26 +234,26 @@
             background-color: transparent;
             border: none;
             border-radius: 0;
-            color: #0066cc;
+            color: var(--accent);
             font-weight: 500;
             transition: color 0.15s ease;
             text-decoration: none;
         }
 
         .entry-company a:hover {
-            color: #0052a3;
+            color: var(--accent-warm);
             text-decoration: underline;
         }
 
         .entry-description {
             font-size: 14px;
-            color: #666;
+            color: var(--muted);
             line-height: 1.5;
         }
 
         .entry-list {
             font-size: 14px;
-            color: #666;
+            color: var(--muted);
             margin-left: 20px;
             list-style-position: inside;
         }
@@ -247,28 +273,37 @@
         .award-item {
             padding: 16px;
             border-radius: 8px;
-            border: 1px solid #f0f0f0;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.8);
             transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .award-item:hover {
-            background-color: #f8f9fa;
-            border-color: #0066cc;
+            background-color: #fff3e6;
+            border-color: rgba(240, 162, 59, 0.6);
             transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0, 102, 204, 0.12);
+            box-shadow: 0 8px 16px rgba(240, 162, 59, 0.18);
         }
 
         .award-title {
             font-weight: 600;
             font-size: 14px;
             margin-bottom: 4px;
-            color: #1c1c1c;
+            color: var(--ink);
         }
 
         .award-subtitle {
             font-size: 13px;
-            color: #999;
+            color: var(--muted-light);
+        }
+
+        .highlight-card {
+            margin-top: 12px;
+            padding: 12px;
+            background: #fff3e6;
+            border-left: 3px solid var(--accent-gold);
+            border-radius: 6px;
         }
 
         /* Footer */
@@ -276,7 +311,7 @@
             padding: 48px 0;
             text-align: center;
             font-size: 13px;
-            color: #999;
+            color: var(--muted-light);
         }
 
         /* Responsive */
@@ -315,12 +350,12 @@
             }
 
             h2 {
-                font-size: 18px;
+                font-size: 19px;
                 margin-bottom: 20px;
             }
 
             .profile-info h1 {
-                font-size: 24px;
+                font-size: 26px;
             }
 
             .award-item:hover {
@@ -381,7 +416,7 @@
                         <li>Built metadata-driven demo repository with 10× discoverability and reuse across teams</li>
                         <li>Optimized demo strategy based on adoption trends and enterprise momentum</li>
                     </ul>
-                    <p style="margin-top: 12px; padding: 12px; background-color: #f0f5ff; border-left: 3px solid #0066cc; border-radius: 4px;">
+                    <p class="highlight-card">
                         <strong>Published:</strong> <a href="https://aws.amazon.com/blogs/machine-learning/transforming-enterprise-operations-four-high-impact-use-cases-with-amazon-nova/" target="_blank" style="font-weight: 600;">AWS ML Blog - "Transforming Enterprise Operations: Four High-Impact Use Cases with Amazon Nova"</a>
                     </p>
                 </div>
